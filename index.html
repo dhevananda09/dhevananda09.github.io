@@ -1,279 +1,188 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dhevananda TV | AI & ML Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    body{
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #222;
-    }
+<title>Dhevananda TV | Full Stack & AI Portfolio</title>
 
-    header{
-      background: #0f172a;
-      color: white;
-      padding: 45px 20px;
-      text-align: center;
-    }
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f5f7fb;
+  color:#222;
+}
 
-    .profile-pic{
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      border: 4px solid white;
-      object-fit: cover;
-      margin-bottom: 12px;
-    }
+header{
+  background:#0f172a;
+  color:white;
+  padding:45px 20px;
+  text-align:center;
+}
 
-    header h1{
-      margin: 8px 0 0;
-      font-size: 32px;
-    }
+.profile-pic{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  border:4px solid white;
+  object-fit:cover;
+}
 
-    header p{
-      margin-top: 10px;
-      font-size: 16px;
-      opacity: 0.9;
-    }
+.btn{
+  display:inline-block;
+  margin:8px;
+  padding:10px 18px;
+  background:#2563eb;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    .btns{
-      margin-top: 18px;
-    }
+.btn.outline{
+  background:transparent;
+  border:2px solid #2563eb;
+  color:#2563eb;
+}
 
-    .btn{
-      display: inline-block;
-      margin: 8px 8px;
-      padding: 10px 18px;
-      background: #2563eb;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.2s;
-    }
+.container{
+  max-width:1000px;
+  margin:30px auto;
+  padding:0 20px;
+}
 
-    .btn:hover{
-      background: #1d4ed8;
-    }
+.section{
+  background:white;
+  padding:25px;
+  margin-bottom:20px;
+  border-radius:14px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.08);
+}
 
-    .btn.outline{
-      background: transparent;
-      border: 2px solid #2563eb;
-      color: #2563eb;
-    }
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+}
 
-    .btn.outline:hover{
-      background: #2563eb;
-      color: white;
-    }
+.card{
+  background:#f8fafc;
+  padding:18px;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+}
 
-    .container{
-      max-width: 950px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
+.small-btn{
+  display:inline-block;
+  padding:8px 14px;
+  margin:5px 6px 0 0;
+  border-radius:8px;
+  text-decoration:none;
+  background:#0f172a;
+  color:white;
+  font-size:13px;
+}
 
-    .section{
-      background: white;
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 14px;
-      box-shadow: 0px 4px 14px rgba(0,0,0,0.08);
-    }
+.small-btn.gray{
+  background:#475569;
+}
+</style>
 
-    .section h2{
-      margin-top: 0;
-      color: #0f172a;
-    }
-
-    .skills span{
-      display: inline-block;
-      background: #e2e8f0;
-      padding: 8px 12px;
-      margin: 6px 6px 0 0;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .projects{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      margin-top: 10px;
-    }
-
-    .card{
-      background: #f8fafc;
-      border-radius: 12px;
-      padding: 18px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .card h3{
-      margin: 0 0 8px;
-      color: #0f172a;
-    }
-
-    .card p{
-      margin: 0 0 12px;
-      color: #444;
-      font-size: 14px;
-      line-height: 1.4;
-    }
-
-    .small-btn{
-      display: inline-block;
-      padding: 8px 14px;
-      margin: 5px 6px 0 0;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 13px;
-      background: #0f172a;
-      color: white;
-    }
-
-    .small-btn:hover{
-      opacity: 0.85;
-    }
-
-    .small-btn.gray{
-      background: #475569;
-    }
-
-    footer{
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #555;
-    }
-
-    a{
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a:hover{
-      text-decoration: underline;
-    }
-  </style>
 </head>
 
 <body>
 
-  <header>
-    <!-- Replace this image later with your own -->
-    <img class="profile-pic"
-     src="profile.jpg"
-      alt="Profile Photo" />
+<header>
+<img class="profile-pic" src="pic.jpeg" />
 
-    <h1>Hello I’m Dhevananda TV</h1>
-    <p>BCA Student | AI & Machine Learning </p>
+<h1>Dhevananda TV</h1>
+<p>BCA Student | Full Stack Developer | AI & ML Enthusiast</p>
 
-    <div class="btns">
-      <!-- Add your resume file link here later -->
-      <a class="btn" href="resume.pdf" download>Download Resume</a>
+<div>
+<a class="btn" href="resume (2).pdf" download>Resume</a>
+<a class="btn outline" href="https://github.com/dhevananda09" target="_blank">GitHub</a>
+<a class="btn outline" href="https://www.linkedin.com/in/dhevananda-tv-7a999728a" target="_blank">LinkedIn</a>
+</div>
+</header>
 
-      <!-- Add your LinkedIn link here -->
-      <a class="btn outline" href="https://www.linkedin.com/in/dhevananda-tv-7a999728a" target="_blank">
-        LinkedIn
-      </a>
+<div class="container">
 
-      <!-- Your GitHub -->
-      <a class="btn outline" href="https://github.com/dhevananda09" target="_blank">
-        GitHub
-      </a>
-    </div>
-  </header>
+<div class="section">
+<h2>About Me</h2>
+<p>
+I am a BCA student passionate about building real-world applications using Full Stack Development and AI/ML.
+I enjoy developing systems that solve practical problems, including secure healthcare systems and booking platforms.
+</p>
+</div>
 
-  <div class="container">
+<div class="section">
+<h2>Skills</h2>
+<p>
+Python • Flask • Machine Learning • SQLAlchemy • HTML • CSS • JavaScript • Bootstrap • Git • Data Analysis
+</p>
+</div>
 
-    <div class="section">
-      <h2>About Me</h2>
-      <p>
-        I am a BCA student specializing in AI & Machine Learning. I enjoy building real-world projects using
-        Python, ML models, and frontend development. My goal is to gain internship opportunities and improve my skills by
-        working on impactful projects.
-      </p>
-    </div>
+<div class="section">
+<h2>Featured Projects</h2>
 
-    <div class="section">
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>Python</span>
-        <span>AI</span>
-        <span>Machine Learning</span>
-        <span>Data Preprocessing</span>
-        <span>Pandas</span>
-        <span>NumPy</span>
-        <span>Scikit-learn</span>
-        <span>Computer Vision</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-      </div>
-    </div>
+<div class="projects">
 
-    <div class="section">
-      <h2>AI & ML Projects</h2>
+<!-- Healthcare Project -->
 
-      <div class="projects">
+<div class="card">
+<h3>Healthcare Data Leakage Prevention</h3>
+<p>
+AI-based system to detect suspicious activity using anomaly detection, OTP authentication, and risk scoring.
+</p>
+<a class="small-btn" href="https://github.com/dhevananda09/healthcare-data-leakage-prevention" target="_blank">GitHub</a>
+</div>
 
-        <div class="card">
-          <h3>Fall Detection System</h3>
-          <p>
-            A safety-focused system designed to detect fall events for senior citizens and help in alerting caregivers.
-          </p>
-          <!-- Replace # with your real project link -->
-          <a class="small-btn" href="https://github.com/dhevananda09/fall-detection-system" target="_blank">GitHub</a>
-        </div>
+<!-- Travel Project -->
 
+<div class="card">
+<h3>Travel Booking Web App</h3>
+<p>
+Full-stack Flask application with booking system, payment flow, admin dashboard, and database integration.
+</p>
+<a class="small-btn" href="https://github.com/dhevananda09/travel-website" target="_blank">GitHub</a>
+</div>
 
-      </div>
-    </div>
+<!-- Fall Detection -->
 
-    <div class="section">
-      <h2>Frontend / Web Projects</h2>
+<div class="card">
+<h3>Fall Detection System</h3>
+<p>
+AI-based system to detect fall events for senior citizens using sensor data and machine learning.
+</p>
+<a class="small-btn" href="https://github.com/dhevananda09/fall-detection-system" target="_blank">GitHub</a>
+</div>
 
-      <div class="projects">
+<!-- Home backed delivery system -->
 
-        <div class="card">
-          <h3>Bakery Website</h3>
-          <p>
-            A responsive frontend website for bakery products, offers, and contact details.
-          </p>
-         <a class="small-btn" href="https://github.com/dhevananda09/homebaked-delivery-system" target="_blank">GitHub</a>
-        </div>
+<div class="card">
+<h3>Home backed delivery system</h3>
+<p>
+A responsive web application for ordering homemade baked products, featuring product listings, order management, and a user-friendly interface.
+</p>
+<a class="small-btn" href="https://github.com/dhevananda09/homebaked-delivery-system" target="_blank">GitHub</a>
+</div>
 
+</div>
+</div>
 
-        <div class="card">
-    <h3>Travel Website</h3>
-    <p>Colorful modern travel landing page (Frontend) with animations.</p>
-    <a class="small-btn" href="https://github.com/dhevananda09/travel-website" target="_blank">GitHub</a>
-    <a class="small-btn gray" href="https://dhevananda09.github.io/travel-website" target="_blank">Live</a>
-  </div>
+<div class="section">
+<h2>Contact</h2>
+<p>Email: dhevananda09@gmail.com</p>
+<p>GitHub: github.com/dhevananda09</p>
+</div>
 
-      </div>
-    </div>
+</div>
 
-    <div class="section">
-      <h2>Contact</h2>
-      <p><b>Email:</b> dhevananda09@gmail.com</p>
-      <p><b>GitHub:</b> <a href="https://github.com/dhevananda09" target="_blank">github.com/dhevananda09</a></p>
-      <p><b>Portfolio:</b> <a href="https://dhevananda09.github.io" target="_blank">dhevananda09.github.io</a></p>
-    </div>
-
-  </div>
-
-  <footer>
-    © 2026 Dhevananda TV | AI & ML Portfolio
-  </footer>
+<footer style="text-align:center;padding:20px;">
+© 2026 Dhevananda TV
+</footer>
 
 </body>
 </html>
